@@ -1,0 +1,63 @@
+<resources>
+    <string name="action_about">About</string>
+    <string name="app_name">Bitconnect Carlos Soundboard</string>
+    <string name="app_version">1.0</string>
+    <string name="version_title">Version</string>
+    <string name="open_source_about">This application is built using Open Source software</string>
+    <string name="licences">Open Source Licences</string>
+    <string name="app_licence_title">Licence</string>
+    <string name="developer">Developer</string>
+    <string name="developer_name">jklaw</string>
+    <string name="github">Github</string>
+    <string name="github_summary">View source on Github</string>
+    <string name="changelog_full_title">Changelog</string>
+    <string name="changelog_title">What\'s New</string>
+    <string name="changelog_ok_button">OK</string>
+    <string name="changelog_show_full">More…</string>
+    <string-array name="sounds">
+        <item>137 Days</item>
+        <item>$140000</item>
+        <item>$25610</item>
+        <item>Bank</item>
+        <item>Bitcoins</item>
+        <item>Bitconnect 1</item>
+        <item>Bitconnect 2</item>
+        <item>Con Artist</item>
+        <item>Everyday</item>
+        <item>Explode</item>
+        <item>Faith and Belief</item>
+        <item>Financially Independently</item>
+        <item>Ha ha ha</item>
+        <item>Hey Hey Hey (Short)</item>
+        <item>Hey Hey Hey (Long)</item>
+        <item>I love Bitconnect</item>
+        <item>Lose Money</item>
+        <item>Mmmmmmmmnonono</item>
+        <item>My name is Carlos</item>
+        <item>Naw</item>
+        <item>Nononono</item>
+        <item>One hun- I mean</item>
+        <item>Real</item>
+        <item>Scam</item>
+        <item>Scammer's game</item>
+        <item>Seed</item>
+        <item>Table</item>
+        <item>Tell you Something</item>
+        <item>Took Money</item>
+        <item>Vietnam</item>
+        <item>We are Coming</item>
+        <item>We are Starting</item>
+        <item>What?</item>
+        <item>What am I gonna do?</item>
+        <item>Wife</item>
+        <item>Woah</item>
+        <item>Wooooooooooo</item>
+        <item>Wowowowowowow</item>
+        <item>Wusup</item>
+        <item>Wusuwusup</item>
+        <item>Wusuwusuwusu</item>
+        <item>Yeyeyeyeyeye</item>
+    </string-array>
+    <string name="title_about">About</string>
+
+</resources>

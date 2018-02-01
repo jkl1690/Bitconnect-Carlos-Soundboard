@@ -1,0 +1,34 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="About">
+        <Preference
+            android:summary="@string/app_version"
+            android:title="@string/version_title" />
+        <Preference
+            android:summary="@string/developer_name"
+            android:title="@string/developer">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/jkl1690" />
+        </Preference>
+        <Preference
+            android:summary="@string/github_summary"
+            android:title="@string/github">
+           <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/jkl1690/Bitconnect-Carlos-Soundboard" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Licences">
+        <Preference
+            android:key="open_source"
+            android:summary="@string/open_source_about"
+            android:title="@string/licences">
+        </Preference>
+        <Preference
+            android:key="licence"
+            android:title="@string/app_licence_title">
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
