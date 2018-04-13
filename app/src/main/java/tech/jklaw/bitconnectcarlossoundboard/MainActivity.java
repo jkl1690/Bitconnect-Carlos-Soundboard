@@ -30,8 +30,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import de.cketti.library.changelog.ChangeLog;
 
@@ -40,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private AdView mAdView;
+    private InterstitialAd mInterstitialAd;
     ListView listView;
-    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-9986876982407306/4172761807");
 
         listView = (ListView) findViewById(R.id.listView);
 
@@ -67,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 try {
+
+                    MediaPlayer mp = new MediaPlayer();
+
                     switch (i) {
                         case 0:
                             mp = MediaPlayer.create(getApplicationContext(), R.raw.a137days);
@@ -237,6 +245,16 @@ public class MainActivity extends AppCompatActivity {
                             mp.start();
                             break;
                     }
+
+                    mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                            mp.release();
+                        }
+
+                    });
+
                 } catch (Exception e) {
                     Toast.makeText(MainActivity.this, "Unable to play sound :(", Toast.LENGTH_LONG).show();
                     Log.e(TAG, "Exception caught when playing sound:");
@@ -250,22 +268,34 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_about) {
-            Intent i = new Intent(this, AboutActivity.class);
-            startActivity(i);
+
+            mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+            mInterstitialAd.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                }
+
+                @Override
+                public void onAdClosed() {
+                    Intent i = new Intent(MainActivity.this, AboutActivity.class);
+                    startActivity(i);
+                    Log.i("Ads", "onAdClosed");
+                }
+            });
+
         }
 
         return super.onOptionsItemSelected(item);

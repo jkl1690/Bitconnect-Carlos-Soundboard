@@ -19,7 +19,7 @@
 <resources>
     <string name="action_about">About</string>
     <string name="app_name">Bitconnect Carlos Soundboard</string>
-    <string name="app_version">1.0</string>
+    <string name="app_version">1.1</string>
     <string name="version_title">Version</string>
     <string name="open_source_about">This application is built using Open Source software</string>
     <string name="licences">Open Source Licences</string>
@@ -32,6 +32,11 @@
     <string name="changelog_title">What\'s New</string>
     <string name="changelog_ok_button">OK</string>
     <string name="changelog_show_full">More…</string>
+    <string name="rate_title">Rate</string>
+    <string name="rate_play">Rate on Google Play</string>
+    <string name="rate_play_summary">Rate the app on Google Play</string>
+    <string name="donate_title">Donate</string>
+    <string name="donate_summary">If you\'re feeling generous, support me and buy me a beer!</string>
     <string-array name="sounds">
         <item>137 Days</item>
         <item>$140000</item>
@@ -76,6 +81,10 @@
         <item>Wusuwusuwusu</item>
         <item>Yeyeyeyeyeye</item>
     </string-array>
+    <string-array name="donation_google_catalog_values">
+        <item>2 Pounds</item>
+        <item>5 Pounds</item>
+    </string-array>
+    <string name="donation_paypal_item">Donation</string>
     <string name="title_about">About</string>
-
 </resources>

@@ -20,6 +20,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tech.jklaw.bitconnectcarlossoundboard">
 
+    <uses-permission android:name="com.android.vending.BILLING" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -45,6 +47,13 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="tech.jklaw.bitconnectcarlossoundboard.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DonationsActivity"
+            android:label="@string/donate_title">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

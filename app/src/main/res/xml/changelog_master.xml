@@ -18,6 +18,13 @@
   -->
 
 <changelog>
+    <release version="1.1" versioncode="2">
+        <change>Improved MediaPlayer playback</change>
+        <change>Improved layout placement</change>
+        <change>Added options to rate and donate in About</change>
+        <change>Fixed incorrect licence displayed in About</change>
+        <change>We are coming and we are coming in WAVES.</change>
+    </release>
     <release version="1.0" versioncode="1">
         <change>Hey hey heeeeeeeey. Wusuwusuwusuwusuwusup! Version 1.0.</change>
         <change>I LOOOVEEE BITCONNNEEEEEEEEEEEEEEEEEEEEEEECT.</change>

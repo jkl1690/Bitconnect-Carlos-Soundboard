@@ -23,10 +23,17 @@ import android.preference.Preference;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
+import android.util.Log;
 import android.view.MenuItem;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 
 import de.psdev.licensesdialog.LicensesDialog;
 import de.psdev.licensesdialog.licenses.ApacheSoftwareLicense20;
+import de.psdev.licensesdialog.licenses.GnuGeneralPublicLicense30;
 import de.psdev.licensesdialog.licenses.GnuLesserGeneralPublicLicense21;
 import de.psdev.licensesdialog.model.Notice;
 import de.psdev.licensesdialog.model.Notices;
@@ -46,6 +53,7 @@ public class AboutActivity extends AppCompatPreferenceActivity {
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 final Notices notices = new Notices();
+                notices.addNotice(new Notice("Android Donations Library", "https://github.com/PrivacyApps/donations", "PrivacyApps", new ApacheSoftwareLicense20()));
                 notices.addNotice(new Notice("ckChangelog", "https://github.com/cketti/ckChangeLog", "cketti", new ApacheSoftwareLicense20()));
                 new LicensesDialog.Builder(AboutActivity.this).setNotices(notices).setIncludeOwnLicense(true).build().show();
                 return false;
@@ -56,7 +64,7 @@ public class AboutActivity extends AppCompatPreferenceActivity {
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 final Notices notices = new Notices();
-                notices.addNotice(new Notice("Bitconnect Carlos Soundboard", "https://github.com/jkl1690/Bitconnect-Carlos-Soundboard", "jkl1690", new GnuLesserGeneralPublicLicense21()));
+                notices.addNotice(new Notice("Bitconnect Carlos Soundboard", "https://github.com/jkl1690/Bitconnect-Carlos-Soundboard", "jkl1690", new GnuGeneralPublicLicense30()));
                 new LicensesDialog.Builder(AboutActivity.this).setNotices(notices).setIncludeOwnLicense(false).build().show();
                 return false;
             }
