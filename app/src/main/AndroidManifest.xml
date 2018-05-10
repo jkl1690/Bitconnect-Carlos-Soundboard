@@ -18,7 +18,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="tech.jklaw.bitconnectcarlossoundboard">
+    package="tech.jklaw.bitconnectsoundboard">
 
     <uses-permission android:name="com.android.vending.BILLING" />
 
@@ -33,7 +33,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".MainActivity">
+            android:name="tech.jklaw.bitconnectsoundboard.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,15 +41,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AboutActivity"
+            android:name="tech.jklaw.bitconnectsoundboard.AboutActivity"
             android:label="@string/title_about"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName="tech.jklaw.bitconnectsoundboard.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="tech.jklaw.bitconnectcarlossoundboard.MainActivity" />
+                android:value="tech.jklaw.bitconnectsoundboard.MainActivity" />
         </activity>
         <activity
-            android:name=".DonationsActivity"
+            android:name="tech.jklaw.bitconnectsoundboard.DonationsActivity"
             android:label="@string/donate_title">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />

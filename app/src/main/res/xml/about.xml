@@ -45,8 +45,8 @@
             android:title="@string/donate_title">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetPackage="tech.jklaw.bitconnectcarlossoundboard"
-                android:targetClass="tech.jklaw.bitconnectcarlossoundboard.DonationsActivity" />
+                android:targetPackage="tech.jklaw.bitconnectsoundboard"
+                android:targetClass="tech.jklaw.bitconnectsoundboard.DonationsActivity" />
         </Preference>
     </PreferenceCategory>
     <PreferenceCategory
@@ -56,7 +56,7 @@
             android:summary="@string/rate_play_summary">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://play.google.com/store/apps/details?id=tech.jklaw.bitconnectcarlossoundboard"/>
+                android:data="https://play.google.com/store/apps/details?id=tech.jklaw.bitconnectsoundboard"/>
         </Preference>
     </PreferenceCategory>
     <PreferenceCategory

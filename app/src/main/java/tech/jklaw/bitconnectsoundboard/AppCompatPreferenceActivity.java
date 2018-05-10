@@ -16,7 +16,7 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package tech.jklaw.bitconnectcarlossoundboard;
+package tech.jklaw.bitconnectsoundboard;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
