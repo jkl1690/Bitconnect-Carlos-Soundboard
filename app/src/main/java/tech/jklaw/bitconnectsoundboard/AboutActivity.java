@@ -20,6 +20,7 @@ package tech.jklaw.bitconnectsoundboard;
 
 import android.os.Bundle;
 import android.preference.Preference;
+import android.preference.PreferenceCategory;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
@@ -42,25 +43,19 @@ public class AboutActivity extends AppCompatPreferenceActivity {
         Preference ospLicenceDialog = findPreference("open_source");
         Preference appLicence = findPreference("licence");
 
-        ospLicenceDialog.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                final Notices notices = new Notices();
-                notices.addNotice(new Notice("Android Donations Library", "https://github.com/PrivacyApps/donations", "PrivacyApps", new ApacheSoftwareLicense20()));
-                notices.addNotice(new Notice("ckChangelog", "https://github.com/cketti/ckChangeLog", "cketti", new ApacheSoftwareLicense20()));
-                new LicensesDialog.Builder(AboutActivity.this).setNotices(notices).setIncludeOwnLicense(true).build().show();
-                return false;
-            }
+        ospLicenceDialog.setOnPreferenceClickListener(preference -> {
+            final Notices notices = new Notices();
+            notices.addNotice(new Notice("Android Donations Library", "https://github.com/PrivacyApps/donations", "PrivacyApps", new ApacheSoftwareLicense20()));
+            notices.addNotice(new Notice("ckChangelog", "https://github.com/cketti/ckChangeLog", "cketti", new ApacheSoftwareLicense20()));
+            new LicensesDialog.Builder(AboutActivity.this).setNotices(notices).setIncludeOwnLicense(true).build().show();
+            return false;
         });
 
-        appLicence.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                final Notices notices = new Notices();
-                notices.addNotice(new Notice("Bitconnect Carlos Soundboard", "https://github.com/jkl1690/Bitconnect-Carlos-Soundboard", "jkl1690", new GnuGeneralPublicLicense30()));
-                new LicensesDialog.Builder(AboutActivity.this).setNotices(notices).setIncludeOwnLicense(false).build().show();
-                return false;
-            }
+        appLicence.setOnPreferenceClickListener(preference -> {
+            final Notices notices = new Notices();
+            notices.addNotice(new Notice("Bitconnect Carlos Soundboard", "https://github.com/jkl1690/Bitconnect-Carlos-Soundboard", "jkl1690", new GnuGeneralPublicLicense30()));
+            new LicensesDialog.Builder(AboutActivity.this).setNotices(notices).setIncludeOwnLicense(false).build().show();
+            return false;
         });
 
     }
