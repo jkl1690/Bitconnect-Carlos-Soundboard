@@ -410,7 +410,7 @@ public class MainActivity extends AppCompatActivity  {
                     if (mInterstitialAd.isLoaded()) {
                         mInterstitialAd.show();
                     } else {
-                        Intent i = new Intent(MainActivity.this, AboutActivity.class);
+                        Intent i = new Intent(MainActivity.this, AboutFragment.class);
                         startActivity(i);
                         Log.i("Ads", "Interstitial init failed, activity launched.");
                     }
@@ -418,7 +418,7 @@ public class MainActivity extends AppCompatActivity  {
 
                 @Override
                 public void onAdClosed() {
-                    Intent i = new Intent(MainActivity.this, AboutActivity.class);
+                    Intent i = new Intent(MainActivity.this, AboutFragment.class);
                     startActivity(i);
                     Log.i("Ads", "Activity launched upon ad exit.");
                 }

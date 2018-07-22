@@ -41,12 +41,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tech.jklaw.bitconnectsoundboard.AboutActivity"
-            android:label="@string/title_about"
-            android:parentActivityName="tech.jklaw.bitconnectsoundboard.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="tech.jklaw.bitconnectsoundboard.MainActivity" />
+            android:name="tech.jklaw.bitconnectsoundboard.AboutFragment"
+            android:theme="@style/AppTheme.MaterialAboutActivity">
+        </activity>
+        <activity
+            android:name="tech.jklaw.bitconnectsoundboard.LicenceActivity"
+            android:theme="@style/AppTheme.MaterialAboutActivity">
         </activity>
         <activity
             android:name="tech.jklaw.bitconnectsoundboard.DonationsActivity"

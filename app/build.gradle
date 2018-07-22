@@ -57,10 +57,14 @@ dependencies {
     implementation ('de.psdev.licensesdialog:licensesdialog:1.8.3')
     implementation 'de.cketti.library.changelog:ckchangelog:1.2.2'
     implementation 'org.sufficientlysecure:donations:2.6'
+    implementation 'com.github.daniel-stoneuk:material-about-library:2.3.0'
+    implementation "com.mikepenz:iconics-core:2.9.5@aar"
+    implementation 'com.mikepenz:community-material-typeface:2.0.46.1@aar'
     implementation 'com.google.android.gms:play-services-ads:15.0.1'
     implementation 'com.android.support:preference-v7:27.1.1'
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.google.android.ads.consent:consent-library:1.0.6'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 }
 
 apply plugin: 'com.google.gms.google-services'

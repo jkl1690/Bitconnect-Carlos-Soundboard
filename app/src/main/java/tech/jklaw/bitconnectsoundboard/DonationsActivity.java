@@ -29,7 +29,7 @@ import org.sufficientlysecure.donations.DonationsFragment;
 
 public class DonationsActivity extends FragmentActivity {
 
-    private static final String GOOGLE_PUBKEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmrCz5HKudiDvBqXptAZiU1T5YE7ydKYsF470IdLpK2qEGCKEaqXwYSg0CC17x/mMOZrXomd8Twrc7slU8ln7HZZ3R8IEouEXKONHoBVJ3Y0OugeXpspaM/oLHmNSAIO30vn+MvOHQv9S4/nqZoXSYEV953/mP4AXfeEORY7cIvDXzp13C3lXF3ZS3qbfRXnh/aCxlgNIB7LFP97oibRVfIoaNORiGCvnph+0M1cSEoWk97EjgOrvYFHlxPFBVUOTmwQP7mXJ84puo0Xy+KJ5yW1AQmLTj9mzJvOwUBLunPpMvht3yukebCdusm5C+pOrT4lY4cR1tNrVoAkwi4J88wIDAQAB";
+    private static final String GOOGLE_PUBKEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxU/i3wUcwvjWff19HTpY+LZ+7jI0+mwWruSGiL5jWmjibLyJpZgld5pIz3Q6GlMXzRNHU+fpNz9C1zX00PMjlxgckoCZOhdOEzh/F6uZc8cKwnkjLC4GUoDTWeExkNc0Q5dLm+9B8/u1LJ6L+8aMcRm1Z9VovlHOlY0/dWx9UkpqROy9M9mC9MKICjJJ5n1+KyE1uz33EqYeVx4da/5LwUpcYes6xGa0f+5YMJsaToICIgXjB3PvjsCOONoZd2nP59X9EGd/o/sFYKxkslaEBoxfYwQjdpOTIEk8i2Jue4p9xCobNR6/lyGBszkMtNvk9xNiPp23ZyIydzaN6BSKswIDAQAB";
     private static final String[] GOOGLE_CATALOG = new String[]{"bitconnect.donation.2",
             "bitconnect.donation.5"};
 
